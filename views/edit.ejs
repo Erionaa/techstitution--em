@@ -1,0 +1,110 @@
+
+
+<% include partials/header %>
+<% include partials/nav %>
+
+
+   <div class="container col-sm-8 col-sm-offset-2" style="background-color: grey"
+        <h1> <%= title %></h1>
+  <h2>1<hr align="left" width="50%"></h2>
+  <style>
+p {
+    text-decoration: underline;
+    -webkit-text-decoration-color: red; /* Safari */    
+    text-decoration-color: black;
+}
+</style>
+
+      <div class="form-group">
+        <form class="form-horizontal" method="POST" action="/update/<%= doc._id %>">
+
+ <label for="sel1">Pika kufitare: </label>
+ 
+
+<select name="pika_kufitare" >
+   <option value="" selected disabled>Zgjedh piken kufitare</option>
+   <option value="vermice">Vermice</option>
+   <option value="merdare">Merdare</option>
+   <option value="dheu-i-bardhe">Dheu i bardhe</option>
+   <option value="qafa-e-morines">Qafa e Morines</option>
+   <option value="qafa-e-prushit">Qafa e Prushit</option>
+   <option value="hani-i-elezit">Hani i Elezit</option>
+</select>
+ 
+ </select><br><br>
+ <h2>2 text-decoration: underline<hr align="left" width="50%"></h2>
+ 
+ <h3>Hyrje</h3>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" >Minimum</label>
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="hyrje_min_minuta" name="hyrje_min_minuta" value=" <%= doc.pika_kufitare %>"type="text">
+  </div>
+  <span>Minuta</span>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" for = "hyrje2">Maximum</label>
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="hyrje_max" name="hyrje_max_minnuta"value=" <%= doc.hyrje_max_minnuta %>" type="text">
+  </div>
+  <span>Minuta</span>
+<h3>Dalje</h3>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" for = "hyrje1">Minimum</label>
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="dalje_minimum" name="dalje_min_minuta" 
+      value=" <%= doc.dalje_min_minuta %>"type="text">
+  </div>
+  <span>Minuta</span>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" for = "hyrje1">Maximum</label>
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="dalje_max" name="dalje_max_minuta" value=" <%= doc.dalje_max_minuta %>"type="text">
+  </div>
+  <span>Minuta</span>
+   <h2>3<hr align="left" width="50%"></h2>
+   <style>
+
+</style>
+<h3>Hyrje</h3>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" for = "hyrje3">Minimum</label>
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="hyrje_2_min_minuta" name="hyrje_2_min_minuta" value=" <%= doc.hyrje_2_min_minuta %>"type="text">
+  </div>
+  <span>Minuta</span>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" for = "hyrjemaximum">Maximum</label>
+    
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="hyrje_1_max_minuta" name="hyrje_2_max_minuta"  value=" <%= doc.hyrje_2_max_minuta %>"type="text">
+  </div>
+  <span>Minuta</span>
+<h3>Dalje</h3>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" >Minimum</label>
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="dalje_2_minimum" name="dalje_2_min_minuta" value=" <%= doc.dalje_2_min_minuta %>"type="text">
+  </div>
+  <span>Minuta</span>
+ <div class=" form-group"></div>
+
+    <label class="control-label col-sm-1 col-sm-offset-2" for = "hyrje1">Maximum</label>
+    <div class="col-sm-3">
+      <input class="form-control input-sm" id="dalje_2_maximum" name="dalje_2_max_minuta" value=" <%= doc.dalje_2_max_minuta %>"type="text">
+  </div>
+  <span>Minuta</span>
+
+  <br><br><br><br>
+  <div class="container col-sm-offset-3">
+  <button type="submit" class="btn btn-info" style="background-color: black">Dergo</button>    
+  <button type="button" class="btn btn-info" style="background-color: black">Fshij</button>
+</form>
+<% include partials/footer %>
+ 

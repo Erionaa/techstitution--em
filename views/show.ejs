@@ -1,0 +1,41 @@
+<% include partials/header %>
+<% include partials/nav %>
+
+ <p> <%= title %> </p>
+	<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th> Pika kufitare </th>
+      <th> Hyrje min minuta</th>
+      <th> Hyrje max minuta</th>
+      <th> Dalje min minuta</th>
+      <th> Hyrje max minuta</th>
+      <th> Hyrje min metra</th>
+      <th> Hyrje max metra</th>
+      <th> Dalje min metra</th>
+      <th> Hyrje max metra</th>
+      <th> Edit </th>
+      <th> Delete </th>
+    </tr>
+  </thead>
+  <tbody>
+  	 <% for(var i=0; i < docs.length; i++) { %>
+	<tr>
+		<td><%= docs[i].pika_kufitare %></td>
+	    <td><%= docs[i].hyrje_min_minuta %></td>
+		<td><%= docs[i].hyrje_max_minnuta %></td>
+		<td><%= docs[i].dalje_min_minuta %></td>
+		<td><%= docs[i].dalje_max_minuta %></td>
+		<td><%= docs[i].hyrje_2_min_minuta %></td>
+		<td><%= docs[i].hyrje_2_max_minuta %></td>
+		<td><%= docs[i].dalje_2_min_minuta %></td>
+		<td><%= docs[i].dalje_2_max_minuta %></td>
+		<td> <a href="/edit/<%= docs[i]._id %>">Edit</a></td>
+		<td> <a href="/delete/<%= docs[i]._id %> "TODO Delete </td>
+	</tr>
+	<% } %>
+  </tbody>
+</table>
+
+
+<% include partials/footer %>

@@ -78,12 +78,20 @@ app.post('/update/:id', function(req,res){
 				console.log(err);
 
 			}
-	res.redirect('/');
+	res.redirect('edit', {title: title, doc: result });
 });
 });
 
-app.get('/delete/:id', function(req,res){
-	res.redirect('/');
+app.get("/delete/:id",function(req,res){
+  var data=req.body;
+  var id = objectId(req.params.id);
+  qkmk.deleteOne({_id:id}, function(err,result)
+  {
+      if (err){
+          console.log(err);
+      }
+      res.redirect('/show');
+  });
 });
 
 app.get('/exercise', function(req,res){
